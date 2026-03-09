@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #2196f3;
     --primary-hover: #1976d2;
@@ -309,7 +308,7 @@ body {
 /* Skills Section */
 .skills {
     padding: 100px 0;
-    background: #0f0f0f;
+    background: #1a1a1a;
 }
 
 .skills h2 {
@@ -365,7 +364,7 @@ body {
 /* Portfolio Section */
 .portfolio {
     padding: 100px 0;
-    background: #1a1a1a;
+    background: #0f0f0f;
 }
 
 .portfolio h2 {
@@ -408,7 +407,7 @@ body {
 }
 
 .project-card {
-    background: #0f0f0f;
+    background: #1a1a1a;
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid #333;
@@ -520,7 +519,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 100px 0;
-    background: #0f0f0f;
+    background: #1a1a1a;
 }
 
 .contact h2 {
@@ -560,7 +559,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #1a1a1a;
+    background: #0f0f0f;
     padding: 3rem 0 1rem;
     border-top: 1px solid #333;
 }
@@ -608,7 +607,6 @@ body {
     color: #888;
 }
 
-/* Responsive Design */
 /* Copy confirmation popup */
 .copy-popup {
     position: fixed;
@@ -746,8 +744,6 @@ body {
     }
 }
 
-
-
 /* Color Picker Widget */
 .color-picker-container {
     position: fixed;
@@ -873,6 +869,9 @@ body {
 @media (max-width: 768px) {
     .color-picker-container {
         right: 10px;
+        top: auto;
+        bottom: 20px;
+        transform: none;
     }
     
     .color-picker-toggle {
@@ -882,20 +881,33 @@ body {
     }
     
     .color-picker-panel {
-        right: 70px;
-        width: 250px;
-        padding: 15px;
+        position: fixed;
+        right: 10px;
+        left: 10px;
+        bottom: 80px;
+        top: auto;
+        transform: none;
+        width: auto;
+        max-width: calc(100vw - 20px);
     }
 }
 
 @media (max-width: 480px) {
+    .color-picker-container {
+        right: 10px;
+        top: auto;
+        bottom: 20px;
+        transform: none;
+    }
+
     .color-picker-panel {
         position: fixed;
         right: 10px;
         left: 10px;
+        bottom: 80px;
         top: auto;
-        bottom: 100px;
         transform: none;
         width: auto;
+        max-width: calc(100vw - 20px);
     }
 }

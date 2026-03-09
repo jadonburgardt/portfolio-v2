@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>My Portfolio</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -95,9 +95,13 @@
                 </div>
                 <div class="about-info">
                     <h2>About Me</h2>
-                    <p>Hello, my name is Jadon! I am currently enrolled at St. Cloud State as a 3rd year Software Engineering Student. In my free time, I enjoy playing basketball, game developement, hobby coding, and more!</p>
-                    <p>While I love the entire scope of development, I am especially passionate about Frontend developement, as it allows me to be creative.</p>
-                    <p> I am a member of my university's Computer Science Club and Student Organization for Software Engineers. In these clubs, I have been able to problem solve, be involved in events, and work on projects with both students and faculty. I am always looking for new opportunities to learn and grow as a developer!</p>
+                    <p>I'm Jadon Burgardt, a third-year Software Engineering student at St. Cloud State University with a passion for building real, polished software. I work across the full stack, with particular strength in frontend development using JavaScript, React, HTML, and CSS, and backend experience with Node.js, Flask, MongoDB, and MySQL.</p>
+
+<p>Beyond web development, I develop games in Unity and Unreal Engine 5, create 3D assets in Blender, and have shipped multiple deployed projects ranging from full-stack web apps to published games on itch.io. I have a growing interest in machine learning and data analytics, and I enjoy finding ways to turn raw data into something meaningful and actionable.</p>
+
+<p>Most recently, I built a production-grade NBA player performance forecasting engine in Python. The system ingests live game data, engineers time-series features, and uses an XGBoost model to predict next-game output. It also implements dual anomaly detection using Z-score and Isolation Forest to flag statistically unusual performances, and exposes everything through a FastAPI REST API. The project includes an interactive Streamlit dashboard, a full automated test suite with pytest, and a CI/CD pipeline through GitHub Actions.</p>
+
+<p>I am an active member of my university's Computer Science Club and Student Organization for Software Engineers, where I collaborate with students and faculty on real projects and events. I am currently seeking internship and co-op opportunities where I can contribute and keep growing.</p>
 <div class="about-buttons">
     <a href="./assets/resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
         View Resume <i class="fas fa-eye"></i>
@@ -105,7 +109,7 @@
     <a href="./assets/resume.pdf" class="btn btn-secondary" download="Jadon_Burgardt_Resume.pdf">
         Download Resume <i class="fas fa-download"></i>
     </a>
-    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <a href="#contact" class="btn btn-secondary">Ask me more!</a>
 </div>
 
 
@@ -115,43 +119,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills & Hobbies</h2>
-            <!-- <p class="section-subtitle">My main set of skills are shown below</p> -->
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>Front-End Development</h3>
-                    <p>I build responsive, user-friendly interfaces using modern technologies like React, HTML, CSS, and Tailwind. My focus is on clean design, accessibility, and smooth user experience across devices.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Back-End Development</h3>
-                    <p>I develop efficient and scalable back-end systems using tools like Node.js, Flask, MongoDB, and MySQL. I enjoy creating APIs, managing databases, and ensuring secure, robust server-side logic.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>3D Modeling & Art</h3>
-                    <p>I create detailed 3D models and environments using Blender and integrate them into real-time engines like Unreal Engine 5. My work includes asset optimization, UV mapping, and material editing.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Game Development</h3>
-                    <p>I develop interactive and immersive gameplay experiences using Unreal Engine 5 and Unity. From scripting mechanics to designing levels and implementing AI, I enjoy bringing game ideas to life from concept to prototype.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
@@ -162,14 +130,50 @@
             <div class="filter-tabs">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <!-- <button class="filter-btn" data-filter="graphics">Graphics & Shaders</button> -->
+                <button class="filter-btn" data-filter="mlai">ML/AI</button>
                 <button class="filter-btn" data-filter="fullstack">Full-Stack Developement</button>
                 <button class="filter-btn" data-filter="frontend">Front-End Development</button>
                 <button class="filter-btn" data-filter="backend">Back-End Development</button>
-                <button class="filter-btn" data-filter="gamedev">Game Development</button>
-                <button class="filter-btn" data-filter="30 Days / 30 Projects">30 Days / 30 Projects</button>
+                <button class="filter-btn" data-filter="gamedev">3D Engines</button>
+                <!-- <button class="filter-btn" data-filter="30 Days / 30 Projects">30 Days / 30 Projects</button> -->
             </div>
 
             <div class="projects-grid">
+
+                <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                
+                <div class="project-card" data-category="mlai">
+                    <div class="project-image">
+                        <img src="./assets/project-10.png" alt="MLNBA">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <!-- <a href="https://ratemymovies.netlify.app/index.html" class="btn btn-small" target="_blank">Demo</a> -->
+                                <a href="https://github.com/jadonburgardt/nba-anomaly-engine" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>NBA Player Anomaly Detection & Performance Forecaster</h3>
+                        <p>Built a real-time NBA player performance forecasting engine that ingests live game data, engineers time-series features, and trains an XGBoost model to predict next-game output. </p>
+</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mlai">
+                    <div class="project-image">
+                        <img src="./assets/project-9.png" alt="chtbot">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://chatbot-api-project.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
+                                <a href="https://github.com/jadonburgardt/Day_1_OpenAI-ChatBot-API" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>OpenAI API Chat Bot (Under Maintenance)</h3>
+                        <p>An OpenAI API chatbot is an AI powered conversational app that uses OpenAI models to understand user input and generate natural language responses in real time.</p>
+                    </div>
+                </div>
 
                 <!----------------------------------------------------------------------------------------------------------------------------------------------->
                 
@@ -184,7 +188,7 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>RateMyMovies (WiP)</h3>
+                        <h3>RateMyMovies (Under Maintenance)</h3>
                         <p>Have you ever wanted to keep track of the movies you've watched, rate them, recommend them to others, and more? Well RateMyMovies is for you! RateMyMovies has a beautiful frontend, paired with a robust backend using the SupaBase API.</p>
                     </div>
                 </div>
@@ -202,24 +206,6 @@
                     <div class="project-info">
                         <h3>Today I Learned!</h3>
                         <p>See daily fun facts from people around the world! Filter by Tech, Science, Finance, and more!</p>
-                    </div>
-                </div>
-
-                <!----------------------------------------------------------------------------------------------------------------------------------------------->
-
-                <div class="project-card" data-category="30 Days / 30 Projects">
-                    <div class="project-image">
-                        <img src="./assets/project-9.png" alt="chtbot">
-                        <div class="project-overlay">
-                            <div class="project-buttons">
-                                <a href="https://chatbot-api-project.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
-                                <a href="https://github.com/jadonburgardt/Day_1_OpenAI-ChatBot-API" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>OpenAI API Chat Bot</h3>
-                        <p>An OpenAI API chatbot is an AI powered conversational app that uses OpenAI models to understand user input and generate natural language responses in real time.</p>
                     </div>
                 </div>
 
@@ -294,6 +280,87 @@
 
                 <div class="project-card" data-category="frontend">
                     <div class="project-image">
+                        <img src="./assets/project-11.png" alt="RefinedRidez">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://refinedridez.online/" class="btn btn-small" target="_blank">Demo</a>
+                                <!-- <a href="https://github.com/jadonburgardt/nba-anomaly-engine" class="btn btn-small btn-secondary" target="_blank">GitHub</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>"RefinedRidez" Business Page</h3>
+                        <p>A landing page for my brothers car detailing business! This was a great excuse for me to try out the Claud Opus model in a real world scenario.</p>
+</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="./assets/project-4.png" alt="bankit">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://bankit-app.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
+                                <a href="https://github.com/jadonburgardt/BankItApp" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>BankIt - Banking Web App</h3>
+                        <p>Secure Login, money transfers with currency conversion, live updates, and more!</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="./assets/project-2.png" alt="race100">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://number-race.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
+                                <a href="https://github.com/jadonburgardt/CoOp-NumberGame" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Race to 100!</h3>
+                        <p>Complete in a CoOp game where you must race the other player to 100 by rolling dice. Every turn you get, you have a temporary score, which you can add to as many times, as long as you do not roll a 1, if you do roll a 1, your temporary score gets erased. To avoid this, you can hold your temp score, which adds to your permanent, untouchable score. Be careful or be cautious, it's up to you!</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="./assets/project-5.png" alt="brainwave">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://brainwave-go.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
+                                <a href="https://github.com/jadonburgardt/Brainwave-site" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Brainwave - a Website Concept</h3>
+                        <p>A modern, highly reactive and optimized website for an AI business concept.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="./assets/project-3.png" alt="guessnumber">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://guess-my-number-go.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
+                                <a href="https://github.com/jadonburgardt/GuessMyNumber-Game" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Guess My Number!</h3>
+                        <p>A fun game where you try to guess a random number 1-20. The faster you guess it, the higher score you get! Built in JavaScript.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
                         <img src="./assets/thump.png" alt="Thump">
                         <div class="project-overlay">
                             <div class="project-buttons">
@@ -321,70 +388,6 @@
                     <div class="project-info">
                         <h3>Portfolio - V1</h3>
                         <p>My first developer portfolio!</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="frontend">
-                    <div class="project-image">
-                        <img src="./assets/project-3.png" alt="guessnumber">
-                        <div class="project-overlay">
-                            <div class="project-buttons">
-                                <a href="https://guess-my-number-go.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
-                                <a href="https://github.com/jadonburgardt/GuessMyNumber-Game" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Guess My Number!</h3>
-                        <p>A fun game where you try to guess a random number 1-20. The faster you guess it, the higher score you get! Built in JavaScript.</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="frontend">
-                    <div class="project-image">
-                        <img src="./assets/project-2.png" alt="race100">
-                        <div class="project-overlay">
-                            <div class="project-buttons">
-                                <a href="https://number-race.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
-                                <a href="https://github.com/jadonburgardt/CoOp-NumberGame" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Race to 100!</h3>
-                        <p>Complete in a CoOp game where you must race the other player to 100 by rolling dice. Every turn you get, you have a temporary score, which you can add to as many times, as long as you do not roll a 1, if you do roll a 1, your temporary score gets erased. To avoid this, you can hold your temp score, which adds to your permanent, untouchable score. Be careful or be cautious, it's up to you!</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="frontend">
-                    <div class="project-image">
-                        <img src="./assets/project-4.png" alt="bankit">
-                        <div class="project-overlay">
-                            <div class="project-buttons">
-                                <a href="https://bankit-app.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
-                                <a href="https://github.com/jadonburgardt/BankItApp" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>BankIt - Banking Web App</h3>
-                        <p>Secure Login, money transfers with currency conversion, live updates, and more!</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="frontend">
-                    <div class="project-image">
-                        <img src="./assets/project-5.png" alt="brainwave">
-                        <div class="project-overlay">
-                            <div class="project-buttons">
-                                <a href="https://brainwave-go.netlify.app/" class="btn btn-small" target="_blank">Demo</a>
-                                <a href="https://github.com/jadonburgardt/Brainwave-site" class="btn btn-small btn-secondary" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Brainwave - a Website Concept</h3>
-                        <p>A modern, highly reactive and optimized website for an AI business concept.</p>
                     </div>
                 </div>
 
@@ -428,6 +431,44 @@
         </div>
     </section>
 
+    <!-- Skills Section
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills & Hobbies</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Front-End Development</h3>
+                    <p>I build responsive, user-friendly interfaces using modern technologies like React, HTML, CSS, and Tailwind. My focus is on clean design, accessibility, and smooth user experience across devices.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Back-End Development</h3>
+                    <p>I develop efficient and scalable back-end systems using tools like Node.js, Flask, MongoDB, and MySQL. I enjoy creating APIs, managing databases, and ensuring secure, robust server-side logic.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>3D Modeling & Art</h3>
+                    <p>I create detailed 3D models and environments using Blender and integrate them into real-time engines like Unreal Engine 5. My work includes asset optimization, UV mapping, and material editing.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Game Development</h3>
+                    <p>I develop interactive and immersive gameplay experiences using Unreal Engine 5 and Unity. From scripting mechanics to designing levels and implementing AI, I enjoy bringing game ideas to life from concept to prototype.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -462,7 +503,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Jadon Burgardt. All rights reserved.</p>
+                <p>&copy; 2026 Jadon Burgardt. All rights reserved.</p>
             </div>
         </div>
     </footer>
